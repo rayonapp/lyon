@@ -291,6 +291,12 @@ impl<OutputVertex, OutputIndex> VertexBuffers<OutputVertex, OutputIndex> {
             indices: Vec::with_capacity(num_indices),
         }
     }
+
+    /// Clear the buffer
+    pub fn clear(&mut self) {
+        self.vertices.clear();
+        self.indices.clear();
+    }
 }
 
 /// A temporary view on a `VertexBuffers` object which facilitate the population of vertex and index
